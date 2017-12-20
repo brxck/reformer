@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
   get 'users/create'
 
-  resources :users, only: [:new, :create]
+  get 'users/edit'
+
+  get 'users/update'
+
+  resources :users, only: [:new, :create, :edit, :update]
 end
